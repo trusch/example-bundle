@@ -1,0 +1,5 @@
+---
+id: sed
+image: btrfaas/frunner
+env:
+  FRUNNER_PROCESS: sed

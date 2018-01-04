@@ -1,3 +1,3 @@
 FROM abiosoft/caddy
 
-COPY index.html /srv/index.html
+COPY index.html /srv/

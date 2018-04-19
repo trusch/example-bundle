@@ -3,12 +3,4 @@ name: my-bundle
 edit:
   image: contiamo/datascience-notebook
 functions:
-  echo:
-    image: functions/alpine:latest
-    command: xargs echo
-  ls:
-    image: functions/alpine:latest
-    command: xargs ls -al
-  wc:
-    image: functions/alpine:latest
-    command: wc
+  custom: {}

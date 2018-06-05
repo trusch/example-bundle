@@ -1,5 +1,0 @@
----
-id: to-lower
-image: functions/alpine
-env:
-  fprocess: "tr [:upper:] [:lower:]"

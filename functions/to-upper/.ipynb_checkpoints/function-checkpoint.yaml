@@ -1,5 +1,0 @@
----
-id: to-upper
-image: btrfaas/frunner
-env:
-  FRUNNER_PROCESS: "tr [:lower:] [:upper:]"

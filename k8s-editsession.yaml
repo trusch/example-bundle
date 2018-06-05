@@ -1,0 +1,11 @@
+apiVersion: "editsession.contiamo.com/v1alpha1"
+kind: "EditSession"
+metadata:
+  name: "example-editsession-1"
+  namespace: "example-bundle"
+spec:
+  image: "debian"
+  command: ["tail","-f","/dev/null"]
+  git: 
+    uri: https://github.com/trusch/example-bundle
+    reference: master

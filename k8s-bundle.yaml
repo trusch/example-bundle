@@ -1,0 +1,36 @@
+apiVersion: "labs.contiamo.com/v1alpha1"
+kind: "Bundle"
+metadata:
+  name: "example-bundle"
+  namespace: "example-tenant"
+spec:
+  functions:
+    custom:
+      image: "registry:5000/example-bundle/custom:latest"
+      command: [ "/usr/bin/caddy", "--port", "8080" ]
+      ports: [ 8080 ]
+      resources:
+        cpu: "100m"
+        memory: "32M"
+    echo:
+      image: "functions/alpine:latest"
+      command: [ "xargs", "echo" ]
+      ports: [ 8080 ]
+      resources:
+        cpu: "100m"
+        memory: "32M"
+    ls:
+      image: "functions/alpine:latest"
+      command: [ "xargs", "ls", "-al" ]
+      ports: [ 8080 ]
+      resources:
+        cpu: "100m"
+        memory: "32M"
+    wc:
+      image: "functions/alpine:latest"
+      command: [ "wc" ]
+      ports: [ 8080 ]
+      resources:
+        cpu: "100m"
+        memory: "32M"
+      

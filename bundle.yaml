@@ -1,6 +1,21 @@
 api_version: 0.0.2
-name: my-bundle
+name: example-bundle
 edit:
-  image: contiamo/datascience-notebook
+  image: debian
+  command: tail -f /dev/null
 functions:
-  custom: {}
+  custom:
+    command: /usr/bin/caddy --port 8080
+    ports: [ 8080 ]
+  echo:
+    image: functions/alpine:latest
+    command: xargs echo
+    ports: [ 8080 ]
+  ls:
+    image: functions/alpine:latest
+    command: xargs ls -al
+    ports: [ 8080 ]
+  wc:
+    image: functions/alpine:latest
+    command: wc
+    ports: [ 8080 ]
